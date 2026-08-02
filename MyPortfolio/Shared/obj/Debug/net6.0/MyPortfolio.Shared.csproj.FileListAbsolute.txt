@@ -1,0 +1,12 @@
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/bin/Debug/net6.0/MyPortfolio.Shared.deps.json
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/bin/Debug/net6.0/MyPortfolio.Shared.dll
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/bin/Debug/net6.0/MyPortfolio.Shared.pdb
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.csproj.AssemblyReference.cache
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.AssemblyInfoInputs.cache
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.AssemblyInfo.cs
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.csproj.CoreCompileInputs.cache
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.dll
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/refint/MyPortfolio.Shared.dll
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/MyPortfolio.Shared.pdb
+/Users/danielarog/Documents/MyPortfolio/MyPortfolio/Shared/obj/Debug/net6.0/ref/MyPortfolio.Shared.dll

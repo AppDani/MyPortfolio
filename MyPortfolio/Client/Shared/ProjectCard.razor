@@ -1,0 +1,86 @@
+<div class="project-card">
+    <div class="project-card-image">
+        @if (MediaItems.Length > 0)
+        {
+            var current = MediaItems[_currentIndex];
+            if (IsVideo(current))
+            {
+                <video src="@current" autoplay loop muted playsinline class="project-card-media" />
+            }
+            else
+            {
+                <img src="@current" alt="@Title" loading="lazy" />
+            }
+
+            @if (MediaItems.Length > 1)
+            {
+                <button class="media-nav media-nav-prev" @onclick="Prev">&#8249;</button>
+                <button class="media-nav media-nav-next" @onclick="Next">&#8250;</button>
+                <div class="media-dots">
+                    @for (int i = 0; i < MediaItems.Length; i++)
+                    {
+                        var idx = i;
+                        <span class="media-dot @(i == _currentIndex ? "active" : "")" @onclick="() => _currentIndex = idx"></span>
+                    }
+                </div>
+            }
+        }
+        else if (!string.IsNullOrEmpty(ImageSrc))
+        {
+            <img src="@ImageSrc" alt="@Title" loading="lazy" />
+        }
+        else
+        {
+            <div class="project-card-placeholder" style="background: linear-gradient(135deg, @AccentColor 0%, @AccentColorDark 100%);">
+                Add image: images/@ImageFileName
+            </div>
+        }
+    </div>
+
+    <div class="project-card-body">
+        <span class="project-category" style="background-color: @AccentColor">@Category</span>
+        <h3 class="project-title">@Title</h3>
+        <p class="project-desc">@Description</p>
+
+        <div class="project-tags">
+            @foreach (var tag in Tags)
+            {
+                <span class="tech-tag">@tag</span>
+            }
+        </div>
+
+        @if (!string.IsNullOrEmpty(Link) && Link != "#")
+        {
+            <a href="@Link" target="_blank" rel="noopener" class="project-link">
+                View Project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+            </a>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public string Category { get; set; } = "";
+    [Parameter] public string AccentColor { get; set; } = "#901517";
+    [Parameter] public string AccentColorDark { get; set; } = "#6b0f11";
+    [Parameter] public string Description { get; set; } = "";
+    [Parameter] public string[] Tags { get; set; } = Array.Empty<string>();
+    [Parameter] public string[] MediaItems { get; set; } = Array.Empty<string>();
+    [Parameter] public string? ImageSrc { get; set; }
+    [Parameter] public string ImageFileName { get; set; } = "project.jpg";
+    [Parameter] public string? Link { get; set; }
+
+    private int _currentIndex = 0;
+
+    private void Prev() => _currentIndex = (_currentIndex - 1 + MediaItems.Length) % MediaItems.Length;
+    private void Next() => _currentIndex = (_currentIndex + 1) % MediaItems.Length;
+
+    private static bool IsVideo(string path)
+    {
+        var lower = path.ToLowerInvariant();
+        return lower.EndsWith(".mp4") || lower.EndsWith(".mov") || lower.EndsWith(".webm");
+    }
+}
