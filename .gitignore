@@ -1,0 +1,21 @@
+# Build output
+bin/
+obj/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.user
+*.suo
+
+# .NET
+*.swp
+project.lock.json
+
+# Claude Code
+.claude/
