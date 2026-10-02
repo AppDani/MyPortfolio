@@ -9,7 +9,13 @@
       "Bash(pip3 show *)",
       "Bash(python3 -c \"import playwright; print\\('playwright available'\\)\")",
       "Bash(pip3 install *)",
-      "Bash(python3 -m playwright install chromium)"
+      "Bash(python3 -m playwright install chromium)",
+      "Bash(git -C /Users/danielarog/Documents/MyPortfolio rm -r --cached MyPortfolio/Client/bin MyPortfolio/Client/obj MyPortfolio/Server/bin MyPortfolio/Server/obj)",
+      "Bash(git add *)",
+      "Bash(git *)",
+      "Bash(gh auth *)",
+      "Read(//Users/danielarog/**)",
+      "Bash(ssh -T git@github.com)"
     ]
   }
 }
